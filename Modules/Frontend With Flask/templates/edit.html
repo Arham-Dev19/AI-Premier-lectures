@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit User</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+
+<div class="container mt-5">
+
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+
+            <div class="card shadow">
+
+                <div class="card-header bg-warning text-dark">
+                    <h4 class="mb-0">Edit User</h4>
+                </div>
+
+                <div class="card-body">
+
+                    <form method="POST">
+
+                        <!-- Name -->
+                        <div class="mb-3">
+                            <label class="form-label">Name</label>
+                            <input type="text" name="name" class="form-control"
+                                   value="{{ user.name }}" required>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="mb-3">
+                            <label class="form-label">Email</label>
+                            <input type="text" name="email" class="form-control"
+                                   value="{{ user.email }}" required>
+                        </div>
+
+                        <!-- Age -->
+                        <div class="mb-3">
+                            <label class="form-label">Age</label>
+                            <input type="number" name="age" class="form-control"
+                                   value="{{ user.age }}" required>
+                        </div>
+
+                        <!-- Gender -->
+                        <div class="mb-3">
+                            <label class="form-label">Gender</label><br>
+
+                            <input type="radio" name="gender" value="Male"
+                            {% if user.gender == "Male" %}checked{% endif %}>
+                            Male
+
+                            <input type="radio" name="gender" value="Female"
+                            {% if user.gender == "Female" %}checked{% endif %}>
+                            Female
+                        </div>
+
+                        <!-- Course -->
+                        <div class="mb-3">
+                            <label class="form-label">Course</label>
+
+                            <select name="course" class="form-control" required>
+                                <option value="HTML" {% if user.course == "HTML" %}selected{% endif %}>HTML</option>
+                                <option value="AI" {% if user.course == "AI" %}selected{% endif %}>AI</option>
+                                <option value="AI" {% if user.course == "Web Development" %}selected{% endif %}>Web Development</option>
+
+                            </select>
+                        </div>
+
+                        <!-- Buttons -->
+                        <div class="d-flex justify-content-between">
+                            <a href="/" class="btn btn-secondary">Back</a>
+                            <button type="submit" class="btn btn-warning">Update</button>
+                        </div>
+
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
