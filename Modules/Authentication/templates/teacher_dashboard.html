@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Dashboard</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css&quot; rel="stylesheet">
+
+    <!-- Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css&quot; rel="stylesheet">
+
+    <style>
+        body {
+            overflow-x: hidden;
+        }
+
+        .sidebar {
+            height: 100vh;
+            background: #0d6efd;
+            color: white;
+            padding-top: 20px;
+        }
+
+        .sidebar a {
+            color: white;
+            display: block;
+            padding: 12px;
+            text-decoration: none;
+        }
+
+        .sidebar a:hover {
+            background: #0b5ed7;
+        }
+
+        .card {
+            border-radius: 12px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container-fluid">
+    <div class="row">
+
+        <!-- Sidebar -->
+        <div class="col-md-2 sidebar">
+            <h4 class="text-center">Teacher Panel</h4>
+            <hr>
+
+            <a href="#"><i class="bi bi-person"></i> Profile</a>
+            <a href="#"><i class="bi bi-calendar-check"></i> Manage Attendance</a>
+            <a href="#"><i class="bi bi-bar-chart"></i> Student Performance</a>
+            <a href="#"><i class="bi bi-upload"></i> Upload Marks</a>
+            <a href="#"><i class="bi bi-file-earmark-text"></i> Reports</a>
+            <a href="#"><i class="bi bi-bell"></i> Notifications</a>
+            <a href="#"><i class="bi bi-chat-dots"></i> Feedback</a>
+
+            <hr>
+            <a href="/logout" class="text-danger">
+                <i class="bi bi-box-arrow-right"></i> Logout
+            </a>
+        </div>
+
+        <!-- Main Content -->
+        <div class="col-md-10 p-4">
+
+            <h2>Welcome, {{name}} 👩‍🏫</h2>
+            <p class="text-muted">Teacher Dashboard Overview</p>
+
+            <!-- Cards -->
+            <div class="row mt-4">
+
+                <div class="col-md-3">
+                    <div class="card bg-primary text-white p-3">
+                        <h5>Students</h5>
+                        <h3>150</h3>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="card bg-success text-white p-3">
+                        <h5>Classes</h5>
+                        <h3>6</h3>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="card bg-warning text-dark p-3">
+                        <h5>Reports</h5>
+                        <h3>12</h3>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="card bg-danger text-white p-3">
+                        <h5>Alerts</h5>
+                        <h3>3</h3>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Info Section -->
+            <div class="mt-5">
+                <h4>Teacher Functionalities</h4>
+                <ul>
+                    <li>Manage student attendance</li>
+                    <li>Upload and update student marks</li>
+                    <li>Monitor student performance</li>
+                    <li>Generate and view reports</li>
+                    <li>Receive alerts and notifications</li>
+                    <li>Provide feedback or raise issues</li>
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
