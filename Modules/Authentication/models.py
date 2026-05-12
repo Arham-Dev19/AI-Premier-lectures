@@ -5,3 +5,5 @@ client = MongoClient("mongodb://localhost:27017/")
 db = client['authdb']
 
 users_collection = db['users']
+
+dataset_collection = db['datasets']
